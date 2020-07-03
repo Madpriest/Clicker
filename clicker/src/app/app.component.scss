@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    app-click-area{
+        flex: 1;
+        
+        background-color: red;
+    }  
+}
+.iwillchangeit{
+    display: flex;
+    flex-direction: row;
+
+app-graphic-area{
+    flex: 1;
+    height: 40vh;
+    background-color: orange;
+}
+app-upgrade-area{
+    flex: 2;
+    height: 40vh;
+    background-color: yellow;
+}
+}

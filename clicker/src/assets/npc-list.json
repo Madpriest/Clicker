@@ -1,0 +1,21 @@
+[
+    {
+        "hp": 100,
+        "name": "Monster",
+        "lvl": 1,
+        "rare": false
+    },
+    {
+        "hp": 120,
+        "name": "Monsterrr",
+        "lvl": 1,
+        "rare": true
+    },
+    {
+        "hp": 110,
+        "name": "MonstAr",
+        "lvl": 1,
+        "rare": false
+    }
+
+]
