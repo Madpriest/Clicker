@@ -1,6 +1,6 @@
 .castle{
     position: absolute;
-    top: 20vh;
+    top: 22vh;
     left: 30vw;
     height: 100px;
     width: 300px;
@@ -8,4 +8,19 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+.gamelvl{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.gold{
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+.monster{
+    position: absolute;
+    top: 300px;
+    right: 50vw;
 }

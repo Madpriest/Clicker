@@ -9,7 +9,7 @@ import { Creature } from 'src/app/app.component';
 export class GameService {
   public creature:Creature;
   
-  public gameLvl:number = 1;
+  public gameLvl:number = 0;
   public potat_amount = 0;
  constructor(private _gameDataService: GameDataService){
   this.creature ={hp: 1,
