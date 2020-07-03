@@ -6,7 +6,12 @@
     app-click-area{
         flex: 1;
         
-        background-color: red;
+      background-image: url(../assets/gambar-pemandangan-alam-kartun2.jpg);
+     // background-image: url(../assets/asd.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: 255,255,255,0.8;
     }  
 }
 .iwillchangeit{
@@ -17,10 +22,19 @@ app-graphic-area{
     flex: 1;
     height: 40vh;
     background-color: orange;
+    border: 6px solid transparent;
+  padding: 15px;
+  border-image: url(../assets/1133.jpg) 6 round round;
+  background-image: url(../assets/465.jpg);
+  background-size: 40px;
 }
 app-upgrade-area{
     flex: 2;
     height: 40vh;
-    background-color: yellow;
+    border: 6px solid transparent;
+  padding: 15px;
+  border-image: url(../assets/1133.jpg) 6 stretch stretch;
+  background-image: url(../assets/464.jpg);
+  background-size: 40px;
 }
 }
