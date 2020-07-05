@@ -7,7 +7,8 @@ export interface Creature{
   hp:number,
   name:string,
   lvl:number,
-  rare:boolean
+  rare:boolean,
+  type: number
 }
 @Component({
   selector: 'app-root',

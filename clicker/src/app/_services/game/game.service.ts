@@ -12,17 +12,19 @@ export class GameService {
   public gameLvl:number = 0;
   public potat_amount = 0;
  constructor(private _gameDataService: GameDataService){
-  this.creature ={hp: 1,
+  this.creature ={hp: 100,
     lvl: 0,
-    name: 'sad',
-    rare: false}
+    name: 'Sad Guy',
+    rare: false,
+    type:1}
  }
 public gold:number = 0;
-  public new_creature(hp:number, name: string, lvl: number, rare:boolean):void{
+  public new_creature(hp:number, name: string, lvl: number, rare:boolean, type:number):void{
     this.creature.hp= hp;
     this.creature.name= name;
     this.creature.lvl= lvl;
     this.creature.rare = rare;
+    this.creature.type = type;
     this.gameLvl +=1;
    }
   

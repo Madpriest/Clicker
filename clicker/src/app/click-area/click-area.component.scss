@@ -1,7 +1,7 @@
 .castle{
     position: absolute;
     top: 22vh;
-    left: 30vw;
+    left: 20vw;
     height: 100px;
     width: 300px;
     background-image: url(src\assets\toppng.com-castle-pixel-art-651x431.png);
@@ -21,6 +21,62 @@
 }
 .monster{
     position: absolute;
-    top: 300px;
-    right: 50vw;
+    top: 29vh;
+    right: 35vw;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+}
+progress[value] {
+    -webkit-appearance: none;
+     appearance: none;
+     margin-bottom: 15px;
+  }
+
+progress[value]::-webkit-progress-bar {
+    background-color: transparent;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    
+  }
+  progress[value]::-webkit-progress-value {
+    border-radius: 3px;
+  }
+.monster4{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+}
+.firstType{
+    
+    background-image: url(src\assets\horn.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+.secondType{
+    background-image: url(src\assets\disciple.gif);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+
+}
+
+
+.kittens{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+}
+.kitten{
+    width: 15px;
+    height: 15px;
+    background-color: green;
+    margin: 5px;
+    z-index: 4;
 }
