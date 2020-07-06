@@ -2,6 +2,20 @@
   font-family: myFont;
   src: url(../assets/ARCADECLASSIC.TTF);
 }
+.day{
+  background-image: url(../assets/day.jpg);
+  background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: 255,255,255,0.8;
+}
+.night{
+  background-image: url(../assets/night.jpg);
+  background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: 255,255,255,0.8;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -11,8 +25,8 @@
     app-click-area{
         flex: 1;
         font-family: myFont;
-      background-image: url(../assets/gambar-pemandangan-alam-kartun2.jpg);
-     // background-image: url(../assets/asd.jpg);
+      
+     // ;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -26,7 +40,7 @@
 app-graphic-area{
   font-family: myFont;
     flex: 1;
-    height: 40vh;
+    height: 33vh;
     background-color: orange;
     border: 6px solid transparent;
   padding: 15px;
@@ -37,7 +51,7 @@ app-graphic-area{
 app-upgrade-area{
   font-family: myFont;
     flex: 2;
-    height: 40vh;
+    height: 33vh;
     border: 6px solid transparent;
   padding: 15px;
   border-image: url(../assets/1133.jpg) 6 stretch stretch;

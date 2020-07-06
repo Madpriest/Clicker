@@ -2,3 +2,11 @@
 body{
     margin: 0;
 }
+.coin{
+    background-image: url(src\assets\coin.png);
+    height: 12px;
+    width: 15px;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}

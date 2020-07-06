@@ -1,2 +1,15 @@
 <div class="first_upgrade"
-(click)="first()">first multiplier</div>
+(click)="first()"
+*ngIf="_upgradeService.first_multiplier_amount != 4">first multiplier <br> cost:{{_upgradeService.first_multiplier_cost}}<div class="coin"></div></div>
+<div class="second_upgrade"
+(click)="second()"
+*ngIf="_upgradeService.second_multiplier_amount != 4">second multiplier <br> cost:{{_upgradeService.second_multiplier_cost}}<div class="coin"></div></div>
+<div class="third_upgrade"
+(click)="third()"
+*ngIf="_upgradeService.third_multiplier_amount != 4">third multiplier <br> cost:{{_upgradeService.third_multiplier_cost}}<div class="coin"></div></div>
+<div class="fourth_upgrade"
+(click)="fourth()"
+*ngIf="_upgradeService.fourth_multiplier_amount != 4">fourth multiplier <br> cost:{{_upgradeService.fourth_multiplier_cost}}<div class="coin"></div></div>
+<div class="fifth_upgrade"
+(click)="fifth()"
+*ngIf="_upgradeService.fifth_multiplier_amount != 4">fifth multiplier <br> cost:{{_upgradeService.fifth_multiplier_cost}} <div class="coin"></div></div>

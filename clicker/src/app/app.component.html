@@ -1,4 +1,8 @@
-<div class="container">
+<div class="container"
+[ngClass]="{
+    'day': _gameService.isDay == true,
+    'night': _gameService.isDay == false
+  }">
 <app-click-area></app-click-area></div>
 <div class="iwillchangeit"><app-upgrade-area></app-upgrade-area>
 <app-graphic-area></app-graphic-area></div>
