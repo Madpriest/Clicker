@@ -40,19 +40,17 @@ progress[value]::-webkit-progress-bar {
     z-index: 2;
 }
 .firstType{
-    
     background-image: url(src\assets\horn.gif);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 200px;
+    background-size: cover;
 }
 .secondType{
     background-image: url(src\assets\disciple.gif);
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: center;
-
 }
 
 

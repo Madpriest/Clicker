@@ -11,26 +11,24 @@ import { GameDataService } from '../_services/game/game-data.service';
 })
 export class GraphicAreaComponent implements OnInit {
 
-  constructor(public _upgradeService:UpgradesService,
-    private _gameService:GameService
-    ) { }
+  constructor(public upgradeService: UpgradesService, private gameService: GameService, ) { }
 
   ngOnInit(): void {
   }
   public first(){
-    this._upgradeService.first_upgrade_multiply(this._gameService.gold);
+    this.upgradeService.first_upgrade_multiply(this.gameService.gold);
   }
   public second(){
-    this._upgradeService.second_upgrade_multiply(this._gameService.gold);
+    this.upgradeService.second_upgrade_multiply(this.gameService.gold);
   }
   public third(){
-    this._upgradeService.third_upgrade_multiply(this._gameService.gold);
+    this.upgradeService.third_upgrade_multiply(this.gameService.gold);
   }
   public fourth(){
-    this._upgradeService.fourth_upgrade_multiply(this._gameService.gold);
+    this.upgradeService.fourth_upgrade_multiply(this.gameService.gold);
   }
   public fifth(){
-    this._upgradeService.fifth_upgrade_multiply(this._gameService.gold);
+    this.upgradeService.fifth_upgrade_multiply(this.gameService.gold);
   }
 
 }

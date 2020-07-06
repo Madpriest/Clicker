@@ -8,77 +8,78 @@ import { UpgradesService } from '../upgrade/upgrades.service';
 export class GameDataService {
 
   constructor(
-   private _gameService: GameService,
-   private _upgradeService: UpgradesService
+   private gameService: GameService,
+   private upgradeService: UpgradesService
     ){}
-public names = ["Jacob", "Mason", "William", "Jayden", "Noah", "Michael", "Ethan", "Alexander", "Daniel"];
+    public titles = ['The Great', 'The Best', 'The Strongest', 'The Furious', 'The Humble'];
+public names = ['Jacob', 'Mason', 'William', 'Jayden', 'Noah', 'Michael', 'Ethan', 'Alexander', 'Daniel'];
 public randomName(){
-  return this.names[Math.floor(Math.random() * this.names.length)]
+  return this.names[Math.floor(Math.random() * this.names.length)];
 }
-public titles = ["The Great", "The Best", "The Strongest", "The Furious", "The Humble"];
+
 
 public randomTitle(){
-  return this.titles[Math.floor(Math.random() * this.titles.length)]
+  return this.titles[Math.floor(Math.random() * this.titles.length)];
 }
-public fromJSON(json:any){
-  this._gameService.gold = json.gold,
-  this._gameService.gameLvl = json.gamelvl,
-  this._upgradeService.first_upgrade_amount = json.firstUpgradeAmount,
-  this._upgradeService.second_upgrade_amount = json.secondUpgradeAmount,
-  this._upgradeService.third_upgrade_amount = json.thirdUpgradeAmount,
-  this._upgradeService.fourth_upgrade_amount = json.fourthUpgradeAmount,
-  this._upgradeService.fifth_upgrade_amount = json.fifthUpgradeAmount,
-  this._upgradeService.first_multiplier_amount = json.firstMultiplierAmount,
-  this._upgradeService.second_multiplier_amount = json.secondMultiplierAmount,
-  this._upgradeService.third_multiplier_amount = json.thirdMultiplierAmount,
-  this._upgradeService.fourth_multiplier_amount = json.fourthMultiplierAmount,
-  this._upgradeService.fifth_multiplier_amount = json.fifthMultiplierAmount,
-  this._upgradeService.first_multiplier_cost = json.firstMultiplierCost,
-  this._upgradeService.second_multiplier_cost = json.secondMultiplierCost,
-  this._upgradeService.third_multiplier_cost = json.thirdMultiplierCost,
-  this._upgradeService.fourth_multiplier_cost = json.fourthMultiplierCost,
-  this._upgradeService.fifth_multiplier_cost = json.fifthMultiplierCost,
-  this._upgradeService.first_cost = json.firstCost,
-  this._upgradeService.second_cost = json.secondCost,
-  this._upgradeService.third_cost = json.thirdCost,
-  this._upgradeService.fourth_cost = json.fourthCost,
-  this._upgradeService.fifth_cost = json.fifthCost
+public fromJSON(json: any){
+  this.gameService.gold = json.gold,
+  this.gameService.gameLvl = json.gamelvl,
+  this.upgradeService.firstUpgradeAmount = json.firstUpgradeAmount,
+  this.upgradeService.secondUpgradeAmount = json.secondUpgradeAmount,
+  this.upgradeService.thirdUpgradeAmount = json.thirdUpgradeAmount,
+  this.upgradeService.fourthUpgradeAmount = json.fourthUpgradeAmount,
+  this.upgradeService.fifthUpgradeAmount = json.fifthUpgradeAmount,
+  this.upgradeService.firstMultiplierAmount = json.firstMultiplierAmount,
+  this.upgradeService.secondMultiplierAmount = json.secondMultiplierAmount,
+  this.upgradeService.thirdMultiplierAmount = json.thirdMultiplierAmount,
+  this.upgradeService.fourthMultiplierAmount = json.fourthMultiplierAmount,
+  this.upgradeService.fifthMultiplierAmount = json.fifthMultiplierAmount,
+  this.upgradeService.firstMultiplierCost = json.firstMultiplierCost,
+  this.upgradeService.secondMultiplierCost = json.secondMultiplierCost,
+  this.upgradeService.thirdMultiplierCost = json.thirdMultiplierCost,
+  this.upgradeService.fourthMultiplierCost = json.fourthMultiplierCost,
+  this.upgradeService.fifthMultiplierCost = json.fifthMultiplierCost,
+  this.upgradeService.firstCost = json.firstCost,
+  this.upgradeService.secondCost = json.secondCost,
+  this.upgradeService.thirdCost = json.thirdCost,
+  this.upgradeService.fourthCost = json.fourthCost,
+  this.upgradeService.fifthCost = json.fifthCost;
 }
 public toJSON(){
   return {
-    gold: this._gameService.gold,
-    gamelvl: this._gameService.gameLvl,
-    firstUpgradeAmount: this._upgradeService.first_upgrade_amount,
-    secondUpgradeAmount: this._upgradeService.second_upgrade_amount,
-    thirdUpgradeAmount: this._upgradeService.third_upgrade_amount,
-    fourthUpgradeAmount: this._upgradeService.fourth_upgrade_amount,
-    fifthUpgradeAmount: this._upgradeService.fifth_upgrade_amount,
-    firstMultiplierAmount: this._upgradeService.first_multiplier_amount,
-    secondMultiplierAmount: this._upgradeService.second_multiplier_amount,
-    thirdMultiplierAmount: this._upgradeService.third_multiplier_amount,
-    fourthMultiplierAmount: this._upgradeService.fourth_multiplier_amount,
-    fifthMultiplierAmount: this._upgradeService.fifth_multiplier_amount,
-    firstMultiplierCost: this._upgradeService.first_multiplier_cost,
-    secondMultiplierCost: this._upgradeService.second_multiplier_cost,
-    thirdMultiplierCost: this._upgradeService.third_multiplier_cost,
-    fourthMultiplierCost: this._upgradeService.fourth_multiplier_cost,
-    fifthMultiplierCost: this._upgradeService.fifth_multiplier_cost,
-    firstCost: this._upgradeService.first_cost,
-    secondCost: this._upgradeService.second_cost,
-    thirdCost: this._upgradeService.third_cost,
-    fourthCost: this._upgradeService.fourth_cost,
-    fifthCost: this._upgradeService.fifth_cost
-  }
+    gold: this.gameService.gold,
+    gamelvl: this.gameService.gameLvl,
+    firstUpgradeAmount: this.upgradeService.firstUpgradeAmount,
+    secondUpgradeAmount: this.upgradeService.secondUpgradeAmount,
+    thirdUpgradeAmount: this.upgradeService.thirdUpgradeAmount,
+    fourthUpgradeAmount: this.upgradeService.fourthUpgradeAmount,
+    fifthUpgradeAmount: this.upgradeService.fifthUpgradeAmount,
+    firstMultiplierAmount: this.upgradeService.firstMultiplierAmount,
+    secondMultiplierAmount: this.upgradeService.secondMultiplierAmount,
+    thirdMultiplierAmount: this.upgradeService.thirdMultiplierAmount,
+    fourthMultiplierAmount: this.upgradeService.fourthMultiplierAmount,
+    fifthMultiplierAmount: this.upgradeService.fifthMultiplierAmount,
+    firstMultiplierCost: this.upgradeService.firstMultiplierCost,
+    secondMultiplierCost: this.upgradeService.secondMultiplierCost,
+    thirdMultiplierCost: this.upgradeService.thirdMultiplierCost,
+    fourthMultiplierCost: this.upgradeService.fourthMultiplierCost,
+    fifthMultiplierCost: this.upgradeService.fifthMultiplierCost,
+    firstCost: this.upgradeService.firstCost,
+    secondCost: this.upgradeService.secondCost,
+    thirdCost: this.upgradeService.thirdCost,
+    fourthCost: this.upgradeService.fourthCost,
+    fifthCost: this.upgradeService.fifthCost
+  };
 }
   public saveState(){
-    localStorage.setItem("ls",JSON.stringify(this.toJSON()))
+    localStorage.setItem('ls', JSON.stringify(this.toJSON()));
   }
   public getState(){
-    this.fromJSON(JSON.parse(localStorage.getItem("ls")))
-    this._upgradeService.firstInterval();
-    this._upgradeService.secondInterval();
-    this._upgradeService.thirdInterval();
-    this._upgradeService.fourthInterval();
-    this._upgradeService.fifthInterval();
+    this.fromJSON(JSON.parse(localStorage.getItem('ls')));
+    this.upgradeService.firstInterval();
+    this.upgradeService.secondInterval();
+    this.upgradeService.thirdInterval();
+    this.upgradeService.fourthInterval();
+    this.upgradeService.fifthInterval();
   }
 }

@@ -26,14 +26,13 @@
         flex: 1;
         font-family: myFont;
       
-     // ;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-color: 255,255,255,0.8;
     }  
 }
-.iwillchangeit{
+.upgrade-area{
     display: flex;
     flex-direction: row;
 
@@ -59,3 +58,6 @@ app-upgrade-area{
   background-size: 40px;
 }
 }
+@media only screen and (max-width: 1000px) { .upgrade-area{
+  height: fit-content;
+} } 

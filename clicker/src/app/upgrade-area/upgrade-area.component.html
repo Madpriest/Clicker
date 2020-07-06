@@ -1,18 +1,28 @@
 <div class="upgrade_cont">
-<div class="first"
-(click)="_upgradesService.first_upgrade(_gameService.gold)">first_upgrade {{_upgradesService.first_upgrade_amount}}
-<div class="cost">cost: {{_upgradesService.first_cost}}<div class="coin"></div></div></div>
-<div class="first"
-(click)="_upgradesService.second_upgrade(_gameService.gold)">second_upgrade {{_upgradesService.second_upgrade_amount}}
-<div class="cost">cost: {{_upgradesService.second_cost}}<div class="coin"></div></div></div>
-<div class="first"
-(click)="_upgradesService.third_upgrade(_gameService.gold)">third_upgrade {{_upgradesService.third_upgrade_amount}}
-<div class="cost">cost: {{_upgradesService.third_cost}}<div class="coin"></div></div></div>
-<div class="first"
-(click)="_upgradesService.fourth_upgrade(_gameService.gold)">fourth_upgrade {{_upgradesService.fourth_upgrade_amount}}
-<div class="cost"><div class="">cost: {{_upgradesService.fourth_cost}}<div class="coin"></div></div></div></div>
-<div class="first"
-(click)="_upgradesService.fifth_upgrade(_gameService.gold)">fifth_upgrade {{_upgradesService.fifth_upgrade_amount}}
-<div class="cost">cost: {{_upgradesService.fifth_cost}} <div class="coin"></div></div></div>
+<div class="upgrade"
+(click)="upgradesService.first_upgrade(gameService.gold)">Fire Kittens {{upgradesService.firstUpgradeAmount}} <div class="flavor_text">
+    Tough, hard-tempered, hot as hell
+</div> Each one deals {{firstDPS}} dps
+<div class="cost">cost: {{upgradesService.firstCost}}<div class="coin"></div></div></div>
+<div class="upgrade"
+(click)="upgradesService.second_upgrade(gameService.gold)">Rifle Kittens {{upgradesService.secondUpgradeAmount}} <div class="flavor_text">
+    He has scars, probably scratched himself
+</div> Each one deals {{secondDPS}} dps
+<div class="cost">cost: {{upgradesService.secondCost}}<div class="coin"></div></div></div>
+<div class="upgrade"
+(click)="upgradesService.third_upgrade(gameService.gold)">Frost Kittens {{upgradesService.thirdUpgradeAmount}} <div class="flavor_text">
+    Chill out!
+</div> Each one deals {{thirdDPS}} dps
+<div class="cost">cost: {{upgradesService.thirdCost}}<div class="coin"></div></div></div>
+<div class="upgrade"
+(click)="upgradesService.fourth_upgrade(gameService.gold)">Lightning Kittens {{upgradesService.fourthUpgradeAmount}} <div class="flavor_text">
+    Thor, Zeus, Kitty
+</div> Each one deals {{fourthDPS}} dps
+<div class="cost"><div class="">cost: {{upgradesService.fourthCost}}<div class="coin"></div></div></div></div>
+<div class="upgrade"
+(click)="upgradesService.fifth_upgrade(gameService.gold)">Karate Kittens {{upgradesService.fifthUpgradeAmount}} <div class="flavor_text">
+    He breaks wooden planks like it`s nothing
+</div> Each one deals {{fifthDPS}} dps
+<div class="cost">cost: {{upgradesService.fifthCost}} <div class="coin"></div></div></div>
 </div>  
 

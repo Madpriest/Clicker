@@ -1,0 +1,15 @@
+.power_up{
+    background-image: url(src\assets\back.png);
+    cursor: pointer;
+    background-size: contain;
+    margin: 1px;
+    padding-left: 2px;
+    color: white;
+    border: white 1px solid;
+    .upgrade{
+        font-size: 10px;
+       // position: relative;
+        //top: 10px;
+       // left: 5px;
+    }
+}

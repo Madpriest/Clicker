@@ -1,25 +1,25 @@
 <div class="sun"
-*ngIf="_gameService.isDay == true"></div>
+*ngIf="gameService.isDay == true"></div>
 <div class="moon"
-*ngIf="_gameService.isDay == false"></div>
+*ngIf="gameService.isDay == false"></div>
 <div class="kittens-fire">
-  <div *ngFor="let kitten of _upgradesService.kittensFire" class="kitten-fire"></div>
+  <div *ngFor="let kitten of upgradesService.kittensFire" class="kitten-fire"></div>
 </div>
   <div class="kittens-rifle">
-    <div *ngFor="let kitten of _upgradesService.kittensRifle" class="kitten-rifle"></div>
+    <div *ngFor="let kitten of upgradesService.kittensRifle" class="kitten-rifle"></div>
   </div>
   <div class="kittens-frost">
-    <div *ngFor="let kitten of _upgradesService.kittensFrost" class="kitten-frost"></div>
+    <div *ngFor="let kitten of upgradesService.kittensFrost" class="kitten-frost"></div>
   </div>
   <div class="kittens-lightning">
-    <div *ngFor="let kitten of _upgradesService.kittensLightning" class="kitten-lightning"></div>
+    <div *ngFor="let kitten of upgradesService.kittensLightning" class="kitten-lightning"></div>
   </div>
   <div class="kittens-karate">
-    <div *ngFor="let kitten of _upgradesService.kittensKarate" class="kitten-karate"></div>
+    <div *ngFor="let kitten of upgradesService.kittensKarate" class="kitten-karate"></div>
   </div>
 <div class="monster">
-    {{_gameService.creature.name}}, {{_gameService.creature.title}} <br> {{_gameService.creature.hp}}/{{max_hp}}
-    <progress id="health" value={{_gameService.creature.hp}} max={{max_hp}}></progress>
+    {{gameService.creature.name}}, {{gameService.creature.title}} <br> {{gameService.creature.hp}}/{{maxHp}}
+    <progress id="health" value={{gameService.creature.hp}} max={{maxHp}}></progress>
 <div class="monster4"
 (click)="swing()"
 [ngClass]="{
@@ -28,6 +28,6 @@
   }"> 
 </div>
 </div>
-<div class="gamelvl">Monsters killed:{{_gameService.gameLvl}} </div>
-<div class="gold">{{_gameService.gold}} <div class="coin"></div></div>
+<div class="gamelvl">Monsters killed:{{gameService.gameLvl}} </div>
+<div class="gold">{{gameService.gold}} <div class="coin"></div></div>
 <div ></div>

@@ -1,15 +1,15 @@
-<div class="first_upgrade"
+<div class="power_up"
 (click)="first()"
-*ngIf="_upgradeService.first_multiplier_amount != 4">first multiplier <br> cost:{{_upgradeService.first_multiplier_cost}}<div class="coin"></div></div>
-<div class="second_upgrade"
+*ngIf="upgradeService.firstMultiplierAmount != 4">Fire Power Up  <span class="upgrade">-- Multiplies the efficiency of Fire  by 2</span><br> cost:{{upgradeService.firstMultiplierCost}}<div class="coin"></div></div>
+<div class="second_upgrade power_up"
 (click)="second()"
-*ngIf="_upgradeService.second_multiplier_amount != 4">second multiplier <br> cost:{{_upgradeService.second_multiplier_cost}}<div class="coin"></div></div>
-<div class="third_upgrade"
+*ngIf="upgradeService.secondMultiplierAmount != 4">Rifle Power Up <span class="upgrade">-- Multiplies the efficiency of Rifle  by 2</span><br> cost:{{upgradeService.secondMultiplierCost}}<div class="coin"></div></div>
+<div class="third_upgrade power_up"
 (click)="third()"
-*ngIf="_upgradeService.third_multiplier_amount != 4">third multiplier <br> cost:{{_upgradeService.third_multiplier_cost}}<div class="coin"></div></div>
-<div class="fourth_upgrade"
+*ngIf="upgradeService.thirdMultiplierAmount != 4">Frost Power Up <span class="upgrade">-- Multiplies the efficiency of Frost  by 2</span> <br> cost:{{upgradeService.thirdMultiplierCost}}<div class="coin"></div></div>
+<div class="fourth_upgrade power_up"
 (click)="fourth()"
-*ngIf="_upgradeService.fourth_multiplier_amount != 4">fourth multiplier <br> cost:{{_upgradeService.fourth_multiplier_cost}}<div class="coin"></div></div>
-<div class="fifth_upgrade"
+*ngIf="upgradeService.fourthMultiplierAmount != 4">Lightning Power Up <span class="upgrade">-- Multiplies the efficiency of Lightning by 2</span> <br> cost:{{upgradeService.fourthMultiplierCost}}<div class="coin"></div></div>
+<div class="fifth_upgrade power_up"
 (click)="fifth()"
-*ngIf="_upgradeService.fifth_multiplier_amount != 4">fifth multiplier <br> cost:{{_upgradeService.fifth_multiplier_cost}} <div class="coin"></div></div>
+*ngIf="upgradeService.fifthMultiplierAmount != 4">Karate Power! <span class="upgrade">-- Multiplies the efficiency of Karate by 2</span> <br> cost:{{upgradeService.fifthMultiplierCost}} <div class="coin"></div></div>

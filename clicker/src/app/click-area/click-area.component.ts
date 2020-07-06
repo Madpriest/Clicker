@@ -14,42 +14,44 @@ import { GameDataService } from '../_services/game/game-data.service';
   styleUrls: ['./click-area.component.scss'],
 })
 export class ClickAreaComponent implements OnInit {
-  public monster:Creature;
-  public max_hp = 100;
-  public type:number = this._gameService.creature.type;
-  constructor(public _gameService:GameService,
-    public _upgradesService: UpgradesService,
-    public _gameDataService: GameDataService) {
+  public monster: Creature;
+  public maxHp = 100;
+  public type: number = this.gameService.creature.type;
+  constructor(public gameService: GameService, public upgradesService: UpgradesService, public gameDataService: GameDataService) {
   }
   private multiplier = 1;
-  private kittens = [1,2,3]
   static randomInt(max) {
     return Math.floor(Math.random() * Math.floor(max)) + 1;
   }
   ngOnInit(): void {
-    if (localStorage.getItem("ls")){
-      this._gameDataService.getState();
-    }
-    else{
-      this._gameService.new_creature(Math.floor(100*1.1*this._gameService.gameLvl), this._gameDataService.randomName(), this._gameDataService.randomTitle(),1, false, ClickAreaComponent.randomInt(2));
-    }
-    setInterval(()=>{
-      this._gameDataService.saveState()
-    }, 100000)
+    if (localStorage.getItem('ls')){
+      this.gameDataService.getState();
+      this.gameService.new_creature(Math.floor(100 * 1.1 * this.gameService.gameLvl),
+      this.gameDataService.randomName(), this.gameDataService.randomTitle(), 1, false, ClickAreaComponent.randomInt(2));
+      this.upgradesService.kittensFire.length = this.upgradesService.firstUpgradeAmount;
+      this.upgradesService.kittensRifle.length = this.upgradesService.secondUpgradeAmount;
+      this.upgradesService.kittensFrost.length = this.upgradesService.thirdUpgradeAmount;
+      this.upgradesService.kittensLightning.length = this.upgradesService.fourthUpgradeAmount;
+      this.upgradesService.kittensKarate.length = this.upgradesService.fifthUpgradeAmount;
+}
     setInterval(() => {
-      if (this._gameService.creature.hp <= 0) {
-        this._gameService.new_creature(Math.floor(100*1.1*this._gameService.gameLvl), this._gameDataService.randomName(), this._gameDataService.randomTitle(),1, false, ClickAreaComponent.randomInt(2));
-        this._gameService.killed();
-        this.max_hp = this._gameService.creature.hp;
-        this.type = this._gameService.creature.type;
+      this.gameDataService.saveState();
+    }, 200000);
+    setInterval(() => {
+      if (this.gameService.creature.hp <= 0) {
+        this.gameService.new_creature(Math.floor(50 * 1.1 * this.gameService.gameLvl),
+         this.gameDataService.randomName(), this.gameDataService.randomTitle(), 1, false, ClickAreaComponent.randomInt(2));
+        this.gameService.killed();
+        this.maxHp = this.gameService.creature.hp;
+        this.type = this.gameService.creature.type;
       }
     }, 100);
-    this._gameService.dayNight()
+    this.gameService.dayNight();
   }
   public swing() {
-    if (this._gameService.isDay == true){
-      this._gameService.creature.hp -= 10 * this.multiplier;
+    if (this.gameService.isDay === true){
+      this.gameService.creature.hp -= 10 * this.multiplier;
     }
-    else this._gameService.creature.hp -= 10 * this.multiplier *2 ;
+    else{ this.gameService.creature.hp -= 10 * this.multiplier * 2; }
   }
 }
