@@ -15,6 +15,9 @@ export class GraphicAreaComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public sword(){
+    this.upgradeService.sword_upgrade(this.gameService.gold);
+  }
   public first(){
     this.upgradeService.first_upgrade_multiply(this.gameService.gold);
   }

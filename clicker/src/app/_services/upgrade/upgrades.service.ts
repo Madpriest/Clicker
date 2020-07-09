@@ -5,12 +5,18 @@ import { GameService } from 'src/app/_services/game/game.service';
   providedIn: 'root'
 })
 export class UpgradesService {
-
+//#region fields
   public kittensFire: Array<any> = [];
   public kittensRifle: Array<any> = [];
   public kittensFrost: Array<any> = [];
   public kittensLightning: Array<any> = [];
   public kittensKarate: Array<any> = [];
+  public swordMultiplier = 1;
+  public swingType = {
+    type: 0,
+    side: 0
+  };
+  public swordUpgradeCost = 100;
   public firstCost = 5;
   public secondCost = 100;
   public thirdCost = 1000;
@@ -42,6 +48,35 @@ export class UpgradesService {
   public thirdMultiplierAmount = 0;
   public fourthMultiplierAmount = 0;
   public fifthMultiplierAmount = 0;
+  //#endregion fields
+  public swing_type(){
+    if (this.swordMultiplier === 1){
+      this.swingType.type = 1;
+      this.swingType.side = Math.floor((Math.random() * 2)) + 1;
+    }
+    if (this.swordMultiplier === 2){
+      this.swingType.type = 2;
+      this.swingType.side = Math.floor((Math.random() * 2)) + 1;
+    }
+    if (this.swordMultiplier === 4){
+      this.swingType.type = 3;
+      this.swingType.side = Math.floor((Math.random() * 2)) + 1;
+    }
+    if (this.swordMultiplier === 8){
+      this.swingType.type = 4;
+      this.swingType.side = Math.floor((Math.random() * 2)) + 1;
+    }
+    setTimeout(() => {
+      this.swingType.type = 0;
+    }, 100);
+  }
+  public sword_upgrade(gold){
+    if (gold >= this.swordUpgradeCost) {
+    this.swordMultiplier = this.swordMultiplier * 2;
+    this.gameService.gold -= this.swordUpgradeCost;
+    this.swordUpgradeCost = Math.floor(this.swordUpgradeCost * 2.5); }
+    else{ alert('NOT ENOUGH Gold'); }
+  }
   public first_upgrade_multiply(gold) {
     if (gold >= this.firstMultiplierCost) {
       this.firstMultiplierAmount++;

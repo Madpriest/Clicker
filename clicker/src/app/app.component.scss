@@ -33,10 +33,12 @@
     }  
 }
 .upgrade-area{
+  
     display: flex;
     flex-direction: row;
 
 app-graphic-area{
+  overflow: auto;
   font-family: myFont;
     flex: 1;
     height: 33vh;
@@ -48,6 +50,7 @@ app-graphic-area{
   background-size: 40px;
 }
 app-upgrade-area{
+  overflow: auto;
   font-family: myFont;
     flex: 2;
     height: 33vh;

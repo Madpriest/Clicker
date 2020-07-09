@@ -17,7 +17,7 @@ export class GameService {
     rare: false,
     type: 1};
  }
-public gold = 0;
+public gold = 999999;
   public new_creature(hp: number, name: string, title: string, lvl: number, rare: boolean, type: number): void{
     this.creature.hp = hp;
     this.creature.name = name;

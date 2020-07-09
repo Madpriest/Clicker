@@ -1,15 +1,19 @@
 .power_up{
-    background-image: url(src\assets\back.png);
+    position: relative;
+    background-image: url(src\assets\repeated-square-dark.png);
     cursor: pointer;
     background-size: contain;
-    margin: 1px;
+    margin: 5px;
     padding-left: 2px;
+    font-size: 20px;
     color: white;
     border: white 1px solid;
+    height: 100px;
     .upgrade{
-        font-size: 10px;
-       // position: relative;
-        //top: 10px;
-       // left: 5px;
+        font-size: 15px;
+       position: absolute;
+       top: 30px;
+       
+       
     }
 }

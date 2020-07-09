@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import { Component, OnInit } from '@angular/core';
 
 import { GameService } from '../_services/game/game.service';
@@ -19,7 +18,7 @@ export class ClickAreaComponent implements OnInit {
   public type: number = this.gameService.creature.type;
   constructor(public gameService: GameService, public upgradesService: UpgradesService, public gameDataService: GameDataService) {
   }
-  private multiplier = 1;
+  public swinging = false;
   static randomInt(max) {
     return Math.floor(Math.random() * Math.floor(max)) + 1;
   }
@@ -35,7 +34,8 @@ export class ClickAreaComponent implements OnInit {
       this.upgradesService.kittensKarate.length = this.upgradesService.fifthUpgradeAmount;
 }
     setInterval(() => {
-      this.gameDataService.saveState();
+      if (this.gameService.gameLvl !== 0)
+        {this.gameDataService.saveState(); }
     }, 200000);
     setInterval(() => {
       if (this.gameService.creature.hp <= 0) {
@@ -49,9 +49,10 @@ export class ClickAreaComponent implements OnInit {
     this.gameService.dayNight();
   }
   public swing() {
+    this.upgradesService.swing_type();
     if (this.gameService.isDay === true){
-      this.gameService.creature.hp -= 10 * this.multiplier;
+      this.gameService.creature.hp -= 10 * this.upgradesService.swordMultiplier;
     }
-    else{ this.gameService.creature.hp -= 10 * this.multiplier * 2; }
+    else{ this.gameService.creature.hp -= 10 * this.upgradesService.swordMultiplier * 2; }
   }
 }

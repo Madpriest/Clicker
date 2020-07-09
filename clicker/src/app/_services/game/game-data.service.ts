@@ -24,6 +24,8 @@ public randomTitle(){
 public fromJSON(json: any){
   this.gameService.gold = json.gold,
   this.gameService.gameLvl = json.gamelvl,
+  this.upgradeService.swordMultiplier = json.swordMultiplier,
+  this.upgradeService.swordUpgradeCost = json.swordUpgradeCost,
   this.upgradeService.firstUpgradeAmount = json.firstUpgradeAmount,
   this.upgradeService.secondUpgradeAmount = json.secondUpgradeAmount,
   this.upgradeService.thirdUpgradeAmount = json.thirdUpgradeAmount,
@@ -49,6 +51,8 @@ public toJSON(){
   return {
     gold: this.gameService.gold,
     gamelvl: this.gameService.gameLvl,
+    swordUpgradeCost: this.upgradeService.swordUpgradeCost,
+    swordMultiplier: this.upgradeService.swordMultiplier,
     firstUpgradeAmount: this.upgradeService.firstUpgradeAmount,
     secondUpgradeAmount: this.upgradeService.secondUpgradeAmount,
     thirdUpgradeAmount: this.upgradeService.thirdUpgradeAmount,

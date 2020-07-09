@@ -18,6 +18,22 @@
     <div *ngFor="let kitten of upgradesService.kittensKarate" class="kitten-karate"></div>
   </div>
 <div class="monster">
+  <div class="swing swing-white-r"
+  *ngIf="upgradesService.swingType.type == 1 && upgradesService.swingType.side == 1"></div>
+  <div class="swing swing-white-l"
+  *ngIf="upgradesService.swingType.type == 1 && upgradesService.swingType.side == 2"></div>
+  <div class="swing swing-orange-r"
+  *ngIf="upgradesService.swingType.type == 2 && upgradesService.swingType.side == 1"></div>
+  <div class="swing swing-orange-l"
+  *ngIf="upgradesService.swingType.type == 2 && upgradesService.swingType.side == 2"></div>
+  <div class="swing swing-green-r"
+  *ngIf="upgradesService.swingType.type == 3 && upgradesService.swingType.side == 1"></div>
+  <div class="swing swing-green-l"
+  *ngIf="upgradesService.swingType.type == 3 && upgradesService.swingType.side == 2"></div>
+  <div class="swing swing-dark-r"
+  *ngIf="upgradesService.swingType.type == 4 && upgradesService.swingType.side == 1"></div>
+  <div class="swing swing-dark-l"
+  *ngIf="upgradesService.swingType.type == 4 && upgradesService.swingType.side == 2"></div>
     {{gameService.creature.name}}, {{gameService.creature.title}} <br> {{gameService.creature.hp}}/{{maxHp}}
     <progress id="health" value={{gameService.creature.hp}} max={{maxHp}}></progress>
 <div class="monster4"

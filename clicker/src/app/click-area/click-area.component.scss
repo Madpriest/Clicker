@@ -53,7 +53,47 @@ progress[value]::-webkit-progress-bar {
     background-position: center;
 }
 
-
+.swing{
+    z-index: 5;
+    top: 100px;
+    position: absolute;  
+    height: 50px;
+    width: 90px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.swing-white-r{
+    background-image: url(src\assets\white.png);
+    background-position: right;
+}
+.swing-white-l{
+    background-image: url(src\assets\whiteLeft.png);
+    background-position: left;
+}
+.swing-orange-r{
+    background-image: url(src\assets\orange.png);
+    background-position: right;
+}
+.swing-orange-l{
+    background-image: url(src\assets\orangeLeft.png);
+    background-position: left;
+}
+.swing-green-r{
+    background-image: url(src\assets\green.png);
+    background-position: right;
+}
+.swing-green-l{
+    background-image: url(src\assets\greenLeft.png);
+    background-position: left;
+}
+.swing-dark-r{
+    background-image: url(src\assets\dark.png);
+    background-position: right;
+}
+.swing-dark-l{
+    background-image: url(src\assets\darkLeft.png);
+    background-position: left;
+}
 .kittens-fire{
     position: absolute;
     top: 230px;
